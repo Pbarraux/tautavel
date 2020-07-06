@@ -1,0 +1,25 @@
+.card-wrapper{
+  position: relative;
+}
+.upper-suit{
+  position: absolute;
+  top:8px;
+  left:8px;
+  text-align: center;
+  font-size: 24px;
+}
+.lower-suit{
+  position: absolute;
+  bottom:16px;
+  right:8px;
+  text-align: center;
+  font-size: 24px;
+  transform:rotate(-180deg);
+  transform-origin: center;
+}
+.suit{
+  font-size:28px;
+}
+.suit-number{
+  line-height: 24px;
+}
