@@ -9,7 +9,8 @@
 </template>
 
 <script>
-import '@/styles/main.scss'
+import '@/styles/main.scss';
+
 export default {
   name: 'App',
   data: () => ({
