@@ -1,6 +1,13 @@
 @import 'reset.scss';
 
 
-$font-color: rgb(226, 19, 19);
-$bg-color: rgb(70, 70, 119);
-
+@media screen and (max-width: 960px) {
+  .gallery-container {
+    margin-top: 56px !important;
+  }
+}
+@media screen and (min-width: 960px) {
+  .gallery-container {
+    margin-top: 64px !important;
+  }
+}
