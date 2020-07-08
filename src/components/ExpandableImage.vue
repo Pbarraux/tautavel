@@ -88,9 +88,7 @@ export default {
       const width = oWidth >= oHeight
         ? oRatio * cHeight
         : cWidth;
-      const height = oHeight > oWidth
-        ? oRatio * cWidth
-        : cHeight;
+      const height = oHeight;
       const left = (this.cloned.clientWidth - width) / 2;
       const right = left + width;
       const top = (this.cloned.clientHeight - height) / 2;

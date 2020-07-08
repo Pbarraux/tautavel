@@ -41,21 +41,21 @@
       </v-row>
       <v-row class="d-flex flex-row" align="baseline" justify="center">
         <v-col justify-center cols=12 md=4>
-         <div class="pa-2 text-h5 text-sm-h5 text-center">
+         <div class="pa-2 text-h6 text-sm-h6 text-center">
              <v-icon class="pin mb-2" color="black">mdi-calendar</v-icon>
              Du 01/09/2020 au 31/12/2020
           </div>
         </v-col>
         <v-col justify-center cols=12 md=4>
-         <div class="pa-2 text-h5 text-sm-h5 text-center">
+         <div class="pa-2 text-h6 text-sm-h6 text-center">
              <v-icon class="pin mb-2" color="black">mdi-phone</v-icon>
-             01 02 03 04 05
+             +49 152 277 63 780
           </div>
         </v-col>
         <v-col justify-center cols=12 md=4>
-         <div class="pa-2 text-h5 text-sm-h5 text-center">
+         <div class="pa-2 text-h6 text-sm-h6 text-center">
              <v-icon class="pin mb-2" color="black">mdi-email</v-icon>
-             lemailquetuveux@gmail.com
+             philippedemazieres@gmail.com
           </div>
         </v-col>
       </v-row>
