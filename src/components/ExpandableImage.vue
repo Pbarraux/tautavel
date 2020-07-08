@@ -30,7 +30,17 @@
         13.09L5,17.59V14H3V21H10M14.5,10.91L19,6.41V10H21V3H14V5H17.59L13.09,9.5L14.5,10.91Z" />
       </svg>
     </i>
-    <v-img v-bind="$attrs"></v-img>
+    <v-img v-bind="$attrs">
+      <template v-slot:placeholder>
+        <v-row
+          class="fill-height ma-0"
+          align="center"
+          justify="center"
+        >
+          <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+        </v-row>
+      </template>
+    </v-img>
   </div>
 </template>
 
