@@ -5,5 +5,12 @@
     "landscapes": "landscapes",
     "activities": "activities",
     "contact": "contact"
+  },
+  "home":{
+    "main":"House available for rental"
+  },
+  "linkwords":{
+    "from":"from",
+    "to":"to"
   }
 }

@@ -5,5 +5,12 @@
     "landscapes": "paysages",
     "activities": "activités",
     "contact": "contact"
+  },
+  "home":{
+    "main":"Maison disponible à la location"
+  },
+  "linkwords":{
+    "from":"du",
+    "to":"au"
   }
 }

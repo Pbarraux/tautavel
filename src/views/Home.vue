@@ -35,7 +35,7 @@
       <v-row id="contact" class="d-flex flex-row nmargin mb-8">
         <v-col justify-center cols=12 >
          <div class="pa-2 text-h5 text-sm-h4 text-center">
-             Maison disponible à la location
+             {{$t('home.main')}}
           </div>
         </v-col>
       </v-row>
@@ -43,7 +43,7 @@
         <v-col justify-center cols=12 md=4>
          <div class="pa-2 text-h6 text-sm-h6 text-center">
              <v-icon class="pin mb-2" color="black">mdi-calendar</v-icon>
-             Du 01/09/2020 au 31/12/2020
+             {{$t('linkwords.from')}} 01/09/2020 {{$t('linkwords.to')}} 31/12/2020
           </div>
         </v-col>
         <v-col justify-center cols=12 md=4>
@@ -69,7 +69,7 @@
                  height="100%"
             >
               <div class="overlay">
-                <div class="text">LA MAISON</div>
+                <div class="text uppercase">{{$t('nav.house')}}</div>
               </div>
             </v-img>
           </LocalizedLink>
@@ -83,7 +83,7 @@
                   height="100%"
              >
                <div class="overlay">
-                 <div class="text">PAYSAGES</div>
+                 <div class="text uppercase">{{$t('nav.landscapes')}}</div>
                </div>
              </v-img>
           </LocalizedLink>
@@ -97,7 +97,7 @@
                  height="100%"
             >
               <div class="overlay">
-                <div class="text">ACTIVIT&#xC9;S</div>
+                <div class="text uppercase">{{$t('nav.activities')}}</div>
               </div>
             </v-img>
           </LocalizedLink>
@@ -107,7 +107,7 @@
         <v-col d-flex justify-center xs-12>
          <div class="text-h5 text-sm-h4 text-center mt-8">
            <v-icon class="pin2 mb-2" color="black">mdi-map-marker</v-icon>
-           <p>Avenue Philippe Poumies, 66720 Tautavel</p>
+           <p>Avenue Philippe Poumies, 66720 Tautavel, France</p>
           </div>
         </v-col>
       </v-row>

@@ -20,7 +20,7 @@
           <v-card-title>{{n.header}}</v-card-title>
           <v-card-subtitle
             color="black"
-            class="pb-0 white--text pb-2">{{n.subheader}}
+            class="pb-0 white--text pb-2">{{$t(n.subheader)}}
           </v-card-subtitle>
         </div>
         </v-img>
@@ -41,7 +41,7 @@ export default {
         // eslint-disable-next-line global-require
         src: require('@/assets/photos/activites/jaja.jpg'),
         header: 'Le Château de Jau',
-        subheader: 'Vins et grillades',
+        subheader: 'nav.home',
         href: 'http://www.chateaudejau.com/grill/',
       },
       {
