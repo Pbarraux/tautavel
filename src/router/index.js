@@ -1,42 +1,55 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-// import goTo from 'vuetify/es5/services/goto';
 import Home from '../views/Home.vue';
 import NotFound from '../views/404.vue';
 import GalleryHome from '../views/GalleryHome.vue';
 import GalleryLandscapes from '../views/GalleryLandscapes.vue';
 import Activities from '../views/Activities.vue';
+import i18n from '../i18n';
 
 Vue.use(VueRouter);
+
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    redirect: `/${i18n.locale}`,
   },
   {
-    path: '/404',
-    component: NotFound,
-  },
-  {
-    path: '/maison',
-    name: 'maison',
-    component: GalleryHome,
-  },
-  {
-    path: '/paysages',
-    name: 'paysages',
-    component: GalleryLandscapes,
-  },
-  {
-    path: '/activites',
-    name: 'activites',
-    component: Activities,
-  },
-  {
-    path: '*',
-    redirect: '/404',
+    path: '/:lang',
+    component: {
+      render(c) { return c('router-view'); },
+    },
+    children: [
+      {
+        path: '/',
+        name: 'Home',
+        component: Home,
+      },
+      {
+        path: '404',
+        component: NotFound,
+      },
+      {
+        path: 'maison',
+        name: 'maison',
+        component: GalleryHome,
+      },
+      {
+        path: 'paysages',
+        name: 'paysages',
+        component: GalleryLandscapes,
+      },
+      {
+        path: 'activites',
+        name: 'activites',
+        component: Activities,
+      },
+      {
+        path: '*',
+        redirect: '404',
+      },
+    ],
   },
 ];
 const scrollBehavior = (to, from, savedPosition) => {

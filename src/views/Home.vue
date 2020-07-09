@@ -61,7 +61,7 @@
       </v-row>
       <v-row class="mt-9 d-flex flex-row">
         <v-col cols=12 md=4 class="photo-container">
-          <router-link to="/maison">
+          <LocalizedLink to="/maison">
             <v-img :src="require('@/assets/photos/maison/jardin.jpg')"
                  class="image"
                  alt="lorem"
@@ -72,10 +72,10 @@
                 <div class="text">LA MAISON</div>
               </div>
             </v-img>
-          </router-link>
+          </LocalizedLink>
         </v-col>
         <v-col cols=12 md=4 class="photo-container">
-          <router-link to="/paysages">
+          <LocalizedLink to="/paysages">
             <v-img :src="require('@/assets/photos/paysages/tautavel.jpg')"
                   class="image"
                   alt="lorem"
@@ -86,10 +86,10 @@
                  <div class="text">PAYSAGES</div>
                </div>
              </v-img>
-          </router-link>
+          </LocalizedLink>
         </v-col>
         <v-col cols=12 md=4 class="photo-container">
-          <router-link to="/activites">
+          <LocalizedLink to="/activites">
             <v-img :src="require('@/assets/photos/activites/jaja.jpg')"
                  class="image"
                  alt="lorem"
@@ -100,7 +100,7 @@
                 <div class="text">ACTIVIT&#xC9;S</div>
               </div>
             </v-img>
-          </router-link>
+          </LocalizedLink>
         </v-col>
       </v-row>
       <v-row>
@@ -120,8 +120,14 @@
 </template>
 
 <script>
+import LocalizedLink from '@/components/LocalizedLink.vue';
+
 export default {
   name: 'Home',
+
+  components: {
+    LocalizedLink,
+  },
 
   data: () => ({
     model: 0,

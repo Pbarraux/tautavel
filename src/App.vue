@@ -11,44 +11,44 @@
         class="hidden-md-and-up"
         @click="drawer = true">
       </v-app-bar-nav-icon>
-      <router-link class="hidden-sm-and-down" to="/">
+      <LocalizedLink class="hidden-sm-and-down" to="/">
         <v-btn
           target="_blank"
           text
           class="relative-position"
         >
-          <span class="white--text">Accueil</span>
+          <span class="white--text">{{$t('nav.home')}}</span>
           <div class="active-marker" v-if="$route.name === 'Home'"></div>
         </v-btn>
-      </router-link>
+      </LocalizedLink>
       <v-spacer></v-spacer>
-      <router-link class="hidden-sm-and-down" to="maison">
+      <LocalizedLink class="hidden-sm-and-down" to="/maison">
         <v-btn
           target="_blank"
           text
         >
-          <span class="white--text">La Maison</span>
+          <span class="white--text">{{$t('nav.house')}}</span>
           <div class="active-marker" v-if="$route.name === 'maison'"></div>
         </v-btn>
-      </router-link>
-      <router-link class="hidden-sm-and-down" to="paysages">
+      </LocalizedLink>
+      <LocalizedLink class="hidden-sm-and-down" to="/paysages">
         <v-btn
           target="_blank"
           text
         >
-          <span class="white--text">Paysages</span>
+          <span class="white--text">{{$t('nav.landscapes')}}</span>
           <div class="active-marker" v-if="$route.name === 'paysages'"></div>
         </v-btn>
-      </router-link>
-      <router-link class="hidden-sm-and-down" to="activites">
+      </LocalizedLink>
+      <LocalizedLink class="hidden-sm-and-down" to="/activites">
         <v-btn
           target="_blank"
           text
         >
-          <span class="white--text">Activit&#xC9;s</span>
+          <span class="white--text">{{$t('nav.activities')}}</span>
           <div class="active-marker" v-if="$route.name === 'activites'"></div>
         </v-btn>
-      </router-link>
+      </LocalizedLink>
       <router-link class="hidden-sm-and-down" to="/#contact">
         <v-btn
           @click="$vuetify.goTo('#scrollToContact', {
@@ -59,9 +59,10 @@
           target="_blank"
           text
         >
-          <span class="mr-2 white--text">Contact</span>
+          <span class="mr-2 white--text">{{$t('nav.contact')}}</span>
         </v-btn>
       </router-link>
+      <LocaleSwitcher/>
     </v-app-bar>
     <v-navigation-drawer
       v-model="drawer"
@@ -78,31 +79,31 @@
         >
           <router-link to="/">
             <v-list-item>
-              <v-list-item-title>Accueil</v-list-item-title>
+              <v-list-item-title>{{$t('nav.home')}}</v-list-item-title>
             </v-list-item>
           </router-link>
 
           <router-link to="maison">
             <v-list-item>
-              <v-list-item-title>La Maison</v-list-item-title>
+              <v-list-item-title>{{$t('nav.house')}}</v-list-item-title>
             </v-list-item>
           </router-link>
 
           <router-link to="paysages">
             <v-list-item>
-              <v-list-item-title>Paysages</v-list-item-title>
+              <v-list-item-title>{{$t('nav.landscapes')}}</v-list-item-title>
             </v-list-item>
           </router-link>
 
           <router-link to="activites">
             <v-list-item>
-              <v-list-item-title>Activités</v-list-item-title>
+              <v-list-item-title>{{$t('nav.activities')}}</v-list-item-title>
             </v-list-item>
           </router-link>
 
           <router-link to="/#contact">
             <v-list-item @click="scrollToContact">
-              <v-list-item-title>Contact</v-list-item-title>
+              <v-list-item-title>{{$t('nav.contact')}}</v-list-item-title>
             </v-list-item>
           </router-link>
         </v-list-item-group>
@@ -121,38 +122,38 @@
       no-gutters
       class="flex-wrap"
     >
-      <router-link to="/">
+      <LocalizedLink to="/">
         <v-btn
           target="_blank"
           text
         >
-          <span class="mr-2 white--text">Accueil</span>
+          <span class="mr-2 white--text">{{$t('nav.home')}}</span>
         </v-btn>
-      </router-link>
-      <router-link to="maison">
+      </LocalizedLink>
+      <LocalizedLink to="/maison">
         <v-btn
           target="_blank"
           text
         >
-          <span class="mr-2 white--text">La Maison</span>
+          <span class="mr-2 white--text">{{$t('nav.house')}}</span>
         </v-btn>
-      </router-link>
-      <router-link to="paysages">
+      </LocalizedLink>
+      <LocalizedLink to="/paysages">
         <v-btn
           target="_blank"
           text
         >
-          <span class="mr-2 white--text">Paysages</span>
+          <span class="mr-2 white--text">{{$t('nav.landscapes')}}</span>
         </v-btn>
-      </router-link>
-      <router-link to="activites">
+      </LocalizedLink>
+      <LocalizedLink to="/activites">
         <v-btn
           target="_blank"
           text
         >
-          <span class="mr-2 white--text">Activit&#xC9;s</span>
+          <span class="mr-2 white--text">{{$t('nav.activities')}}</span>
         </v-btn>
-      </router-link>
+      </LocalizedLink>
       <router-link to="/#contact">
         <v-btn
           @click="$vuetify.goTo('#scrollToContact', {
@@ -163,7 +164,7 @@
           target="_blank"
           text
         >
-          <span class="mr-2 white--text">Contact</span>
+          <span class="mr-2 white--text">{{$t('nav.contact')}}</span>
         </v-btn>
       </router-link>
       <v-col
@@ -180,15 +181,20 @@
 
 <script>
 import '@/styles/main.scss';
+import LocaleSwitcher from '@/components/LocaleSwitcher.vue';
+import LocalizedLink from '@/components/LocalizedLink.vue';
 
 export default {
   name: 'App',
 
   components: {
+    LocaleSwitcher,
+    LocalizedLink,
   },
 
   data: () => ({
     drawer: false,
+    langs: ['fr', 'en'],
   }),
   computed: {
     topBarColor() {
@@ -206,6 +212,12 @@ export default {
         offset: 0,
         easing: 'easeInOutCubic',
       });
+    },
+    setLocale(locale) {
+      this.$i18n.locale = locale;
+      // console.log(locale)
+      this.$router.push({ lang: locale });
+      // this.hideDropdown();
     },
   },
 };
