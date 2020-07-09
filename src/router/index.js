@@ -98,6 +98,7 @@ const scrollBehavior = (to, from, savedPosition) => {
 
 
 const router = new VueRouter({
+  mode: 'history',
   routes,
   scrollBehavior,
 });
