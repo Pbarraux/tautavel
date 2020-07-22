@@ -16,6 +16,14 @@ const routes = [
     redirect: `/${i18n.locale}`,
   },
   {
+    path: '*',
+    redirect: '404',
+  },
+  {
+    path: '404',
+    component: NotFound,
+  },
+  {
     path: '/:lang',
     component: {
       render(c) { return c('router-view'); },
