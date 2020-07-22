@@ -75,7 +75,7 @@ const scrollBehavior = (to, from, savedPosition) => {
 
     // if the returned position is falsy or an empty object,
     // will retain current scroll position.
-    return false;
+    return { x: 0, y: 0 };
   }
 
   return new Promise((resolve) => {
@@ -101,6 +101,11 @@ const router = new VueRouter({
   mode: 'history',
   routes,
   scrollBehavior,
+});
+
+router.beforeEach((to, from, next) => {
+  window.scrollTo(0, 0);
+  next();
 });
 
 export default router;

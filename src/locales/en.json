@@ -2,9 +2,9 @@
   "nav":{
     "home":"Home",
     "house": "The House",
-    "landscapes": "landscapes",
-    "activities": "activities",
-    "contact": "contact"
+    "landscapes": "Landscapes",
+    "activities": "Activities",
+    "contact": "Contact"
   },
   "home":{
     "main":"House available for rental"

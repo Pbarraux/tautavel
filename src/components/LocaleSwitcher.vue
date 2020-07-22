@@ -1,12 +1,14 @@
 <template>
   <div class="locale-switcher">
     <v-btn
-      class="mr-2"
+      class="mr-3 pa-0"
+      width="24"
       v-for="(locale, index) in locales"
       :key="index"
       @click.prevent="changeLocale(locale.code)"
-      icon>
-      <v-img :src="locale.flagSrc" width="32" height="32" class="mr-3"/>
+       text
+       icon>
+      <v-img :src="locale.flagSrc" width="24"/>
     </v-btn>
   </div>
 </template>

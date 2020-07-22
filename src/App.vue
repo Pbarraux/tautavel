@@ -49,7 +49,7 @@
           <div class="active-marker" v-if="$route.name === 'activites'"></div>
         </v-btn>
       </LocalizedLink>
-      <router-link class="hidden-sm-and-down" to="/#contact">
+      <LocalizedLink class="hidden-sm-and-down" to="/#contact">
         <v-btn
           @click="$vuetify.goTo('#scrollToContact', {
           duration: 700,
@@ -61,7 +61,7 @@
         >
           <span class="mr-2 white--text">{{$t('nav.contact')}}</span>
         </v-btn>
-      </router-link>
+      </LocalizedLink>
       <LocaleSwitcher/>
     </v-app-bar>
     <v-navigation-drawer
@@ -77,35 +77,35 @@
           v-model="group"
           active-class="deep-purple--text text--accent-4"
         >
-          <router-link to="/">
+          <LocalizedLink to="/">
             <v-list-item>
               <v-list-item-title>{{$t('nav.home')}}</v-list-item-title>
             </v-list-item>
-          </router-link>
+          </LocalizedLink>
 
-          <router-link to="maison">
+          <LocalizedLink to="maison">
             <v-list-item>
               <v-list-item-title>{{$t('nav.house')}}</v-list-item-title>
             </v-list-item>
-          </router-link>
+          </LocalizedLink>
 
-          <router-link to="paysages">
+          <LocalizedLink to="paysages">
             <v-list-item>
               <v-list-item-title>{{$t('nav.landscapes')}}</v-list-item-title>
             </v-list-item>
-          </router-link>
+          </LocalizedLink>
 
-          <router-link to="activites">
+          <LocalizedLink to="activites">
             <v-list-item>
               <v-list-item-title>{{$t('nav.activities')}}</v-list-item-title>
             </v-list-item>
-          </router-link>
+          </LocalizedLink>
 
-          <router-link to="/#contact">
+          <LocalizedLink to="/#contact">
             <v-list-item @click="scrollToContact">
               <v-list-item-title>{{$t('nav.contact')}}</v-list-item-title>
             </v-list-item>
-          </router-link>
+          </LocalizedLink>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
