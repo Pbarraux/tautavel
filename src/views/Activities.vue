@@ -1,6 +1,6 @@
 <template>
   <v-container class="gallery-container">
-    <v-row d-flex flex-column class="mt-4 mb-4">
+    <v-row class="d-flex flex-row mt-4 mb-4">
       <v-col v-for="(n, index) in activities" :key="index" cols=12 md=4>
       <v-card
         class="mx-auto"
@@ -12,12 +12,21 @@
           class="white--text align-end"
           height="300px"
           :src="n.src"
-          :lazy-src="n.src"
+          :lazy-src="require('@/assets/photos/placeholder.png')"
           :alt="n.alt"
           :title="n.title"
         >
+        <template v-slot:placeholder>
+        <v-row
+          class="fill-height ma-0"
+          align="center"
+          justify="center"
+        >
+          <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+        </v-row>
+      </template>
         <div class="dark-div">
-          <v-card-title>{{n.header}}</v-card-title>
+          <v-card-title>{{$t(n.header)}}</v-card-title>
           <v-card-subtitle
             color="black"
             class="pb-0 white--text pb-2">{{$t(n.subheader)}}
@@ -40,8 +49,8 @@ export default {
         alt: 'jaja de jau',
         // eslint-disable-next-line global-require
         src: require('@/assets/photos/activites/jaja.jpg'),
-        header: 'Le Château de Jau',
-        subheader: 'nav.home',
+        header: 'activities.header1',
+        subheader: 'activities.subheader1',
         href: 'http://www.chateaudejau.com/grill/',
       },
       {
@@ -49,8 +58,8 @@ export default {
         alt: 'les gorges de gouleyrous',
         // eslint-disable-next-line global-require
         src: require('@/assets/photos/activites/gorge.jpg'),
-        header: 'Les Gorges de Gouleyrous',
-        subheader: 'Site naturel',
+        header: 'activities.header2',
+        subheader: 'activities.subheader2',
         href: 'https://www.odeaanaude.eu/catalogaude2/gorges-de-gouleyrous-p-590.html?language=en',
       },
       {
@@ -58,17 +67,17 @@ export default {
         alt: 'pays cathares',
         // eslint-disable-next-line global-require
         src: require('@/assets/photos/activites/cathares.jpg'),
-        header: 'Pays Cathares',
-        subheader: 'Sites historiques',
-        href: 'https://www.odeaanaude.eu/catalogaude2/gorges-de-gouleyrous-p-590.html?language=en',
+        header: 'activities.header3',
+        subheader: 'activities.subheader3',
+        href: 'https://www.payscathare.org/les-sites', // to chqnge
       },
       {
         title: 'Musée de tautavel',
         alt: 'musée de tautavel',
         // eslint-disable-next-line global-require
         src: require('@/assets/photos/activites/musee.jpg'),
-        header: 'Musée de préhistoire de Tautavel',
-        subheader: 'Site culturel',
+        header: 'activities.header4',
+        subheader: 'activities.subheader4',
         href: 'https://www.france-voyage.com/tourism/museum-prehistory-at-tautavel-2051.htm',
       },
       {
@@ -76,8 +85,8 @@ export default {
         alt: 'Languedoc-Roussillon',
         // eslint-disable-next-line global-require
         src: require('@/assets/photos/activites/languedoc.jpg'),
-        header: 'Le Languedoc-Roussillon',
-        subheader: 'Autres activités',
+        header: 'activities.header5',
+        subheader: 'activities.subheader5',
         href: 'https://meinfrankreich.com/tag/languedoc-roussillon/',
       },
     ],

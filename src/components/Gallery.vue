@@ -2,7 +2,11 @@
   <v-container>
     <v-row d-flex flex-row>
       <v-col v-for="(n, index) in photos" :key="index" cols=12 sm=12 md=6 lg=4>
-        <ExpandableImage :src="n.src" :lazy-src="n.src" :alt="n.alt"></ExpandableImage>
+        <ExpandableImage
+          :src="n.src"
+          :lazy-src="require('@/assets/photos/placeholder.png')"
+          :alt="n.alt">
+        </ExpandableImage>
       </v-col>
     </v-row>
   </v-container>

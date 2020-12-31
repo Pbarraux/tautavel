@@ -172,7 +172,7 @@
         cols="12"
       >
         &#169; 2020 - <router-link to="disclaimer">
-          <a style="color:white;">Mentions légales</a></router-link>
+          <a style="color:white;">{{$t('nav.legal')}}</a></router-link>
       </v-col>
     </v-row>
   </v-footer>

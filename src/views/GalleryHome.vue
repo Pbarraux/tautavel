@@ -1,5 +1,18 @@
+/* eslint-disable max-len */
 <template>
-  <v-container class="gallery-container">
+  <v-container class="gallery-container text-h6">
+    <h2 class="text-h4 mb-10 mt-8">
+      {{$t('homedesc.title')}}
+    </h2>
+    <p>
+      {{$t('homedesc.a')}}
+    </p>
+    <p>
+      {{$t('homedesc.b')}}
+    </p>
+    <p>
+      {{$t('homedesc.c')}}
+    </p>
     <Gallery :photos=photos></Gallery>
   </v-container>
 </template>
@@ -15,35 +28,42 @@ export default {
   data: () => ({
     photos: [
       // eslint-disable-next-line global-require
-      { title: 'Terrasse', alt: 'terrasse', src: require('@/assets/photos/maison/terasse.jpg') },
-      // eslint-disable-next-line global-require
-      { title: 'Jardin', alt: 'jardin', src: require('@/assets/photos/maison/jardin.jpg') },
-      // eslint-disable-next-line global-require
       { title: 'Piscine', alt: 'piscine', src: require('@/assets/photos/maison/pool.jpg') },
       // eslint-disable-next-line global-require
-      { title: 'Jardin', alt: 'Jardin', src: require('@/assets/photos/maison/2.jpg') },
+      { title: 'Jardin', alt: 'jardin', src: require('@/assets/photos/maison/9.jpg') },
       // eslint-disable-next-line global-require
-      { title: 'Jardin au crépuscule', alt: 'jardin-crépuscule', src: require('@/assets/photos/maison/3.jpg') },
+      { title: 'Salon', alt: 'salon', src: require('@/assets/photos/maison/17.jpg') },
       // eslint-disable-next-line global-require
-      { title: 'Fleurs', alt: 'fleurs', src: require('@/assets/photos/maison/6.jpg') },
+      { title: 'Salon', alt: 'salon', src: require('@/assets/photos/maison/18.jpg') },
       // eslint-disable-next-line global-require
-      { title: 'Jardin', alt: 'Jardin', src: require('@/assets/photos/maison/7.jpg') },
+      { title: 'Salon', alt: 'salon', src: require('@/assets/photos/maison/18-1.jpg') },
       // eslint-disable-next-line global-require
-      { title: 'Vignes', alt: 'vignes', src: require('@/assets/photos/maison/8.jpg') },
+      { title: 'Chambre', alt: 'chambre', src: require('@/assets/photos/maison/19.jpg') },
       // eslint-disable-next-line global-require
-      { title: 'Jardin', alt: 'Jardin', src: require('@/assets/photos/maison/9.jpg') },
+      { title: 'Chambre', alt: 'chambre', src: require('@/assets/photos/maison/20.jpg') },
       // eslint-disable-next-line global-require
-      { title: 'Jardin', alt: 'Jardin', src: require('@/assets/photos/maison/10.jpg') },
+      { title: 'Chambre', alt: 'chambre', src: require('@/assets/photos/maison/21.jpg') },
       // eslint-disable-next-line global-require
-      { title: 'Oranger', alt: 'oranger', src: require('@/assets/photos/maison/11.jpg') },
+      { title: 'Salle de bain', alt: 'salle de bain', src: require('@/assets/photos/maison/22.jpg') },
       // eslint-disable-next-line global-require
-      { title: 'Piscine', alt: 'piscine', src: require('@/assets/photos/maison/12.jpg') },
-      // eslint-disable-next-line global-require
-      { title: 'Déjeuner', alt: 'déjeuner', src: require('@/assets/photos/maison/14.jpg') },
+      { title: 'Cuisine', alt: 'cuisine', src: require('@/assets/photos/maison/23.jpg') },
     ],
   }),
 };
 </script>
 <style lang="scss" scoped>
-
+@media screen and (max-width: 960px){
+  .gallery-container {
+    width:90% !important
+  }
+}
+.gallery-container{
+  text-align: center;
+}
+.text-h6{
+  font-weight: 400 !important;
+}
+.text-h4{
+  font-weight: 300 !important;
+}
 </style>

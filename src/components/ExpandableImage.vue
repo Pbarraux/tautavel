@@ -30,7 +30,7 @@
         13.09L5,17.59V14H3V21H10M14.5,10.91L19,6.41V10H21V3H14V5H17.59L13.09,9.5L14.5,10.91Z" />
       </svg>
     </i>
-    <v-img v-bind="$attrs">
+    <v-img height="300px" v-bind="$attrs">
       <template v-slot:placeholder>
         <v-row
           class="fill-height ma-0"
@@ -50,7 +50,7 @@ export default {
   props: {
     closeOnBackgroundClick: {
       type: Boolean,
-      default: false,
+      default: true,
     },
   },
   data() {
@@ -69,33 +69,7 @@ export default {
     },
     onExpandedImageClick(e) {
       e.stopPropagation();
-      const image = this.cloned.querySelector('img');
-      // eslint-disable-next-line max-len
-      const imagePosition = this.getRenderedSize(image.width, image.height, image.naturalWidth, image.naturalHeight);
-      if (
-        (e.clientX < imagePosition.left)
-        || (e.clientX > imagePosition.right)
-        || (e.clientY < imagePosition.top)
-        || (e.clientY > imagePosition.bottom)
-      ) {
-        this.expanded = false;
-      }
-    },
-    getRenderedSize(cWidth, cHeight, oWidth, oHeight) {
-      const oRatio = oWidth > oHeight
-        ? oWidth / oHeight
-        : oHeight / oWidth;
-      const width = oWidth >= oHeight
-        ? oRatio * cHeight
-        : cWidth;
-      const height = oHeight;
-      const left = (this.cloned.clientWidth - width) / 2;
-      const right = left + width;
-      const top = (this.cloned.clientHeight - height) / 2;
-      const bottom = top + height;
-      return {
-        left, top, right, bottom,
-      };
+      this.expanded = false;
     },
   },
   watch: {
@@ -103,6 +77,7 @@ export default {
       this.$nextTick(() => {
         if (status) {
           this.cloned = this.$el.cloneNode(true);
+          this.cloned.querySelector('.v-image').style.height = 'unset';
           this.closeButtonRef = this.cloned.querySelector('.close-button');
           this.closeButtonRef.addEventListener('click', this.closeImage);
           document.body.appendChild(this.cloned);

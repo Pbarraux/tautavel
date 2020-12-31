@@ -5,7 +5,7 @@
 >
   <v-carousel
     v-model="model"
-    :height= "viewWidth <= 1440 ? '100vh' : '800px'"
+    :height= "viewWidth <= 1440 ? '100vh' : '100vh'"
     interval="8000"
     cycle
     hide-delimiters
@@ -15,7 +15,15 @@
       v-for="(item,i) in carouselItems"
       :key="i"
       :src="item.src"
-    ></v-carousel-item>
+    >
+      <div class="carousel-overlay d-flex justify-center align-center">
+        <div class="w80">
+          <h1 class="text-h4 text-center">
+            {{$t(item.text)}}
+          </h1>
+        </div>
+      </div>
+    </v-carousel-item>
     <section @click="$vuetify.goTo('#scrollToContact', {
           duration: 700,
           offset: 0,
@@ -62,12 +70,14 @@
       <v-row class="mt-9 d-flex flex-row">
         <v-col cols=12 md=4 class="photo-container">
           <LocalizedLink to="/maison">
-            <v-img :src="require('@/assets/photos/maison/jardin.jpg')"
-                 class="image"
-                 alt="lorem"
-                 width="100%"
-                 height="100%"
-            >
+            <v-img
+              :src="require('@/assets/photos/maison/jardin.jpg')"
+              :lazy-src="require('@/assets/photos/placeholder.png')"
+              class="image"
+              alt="lorem"
+              width="100%"
+              height="100%"
+             >
               <div class="overlay">
                 <div class="text uppercase">{{$t('nav.house')}}</div>
               </div>
@@ -76,11 +86,13 @@
         </v-col>
         <v-col cols=12 md=4 class="photo-container">
           <LocalizedLink to="/paysages">
-            <v-img :src="require('@/assets/photos/paysages/tautavel.jpg')"
-                  class="image"
-                  alt="lorem"
-                  width="100%"
-                  height="100%"
+            <v-img
+              :src="require('@/assets/photos/paysages/tautavel.jpg')"
+              :lazy-src="require('@/assets/photos/placeholder.png')"
+              class="image"
+              alt="lorem"
+              width="100%"
+              height="100%"
              >
                <div class="overlay">
                  <div class="text uppercase">{{$t('nav.landscapes')}}</div>
@@ -90,12 +102,14 @@
         </v-col>
         <v-col cols=12 md=4 class="photo-container">
           <LocalizedLink to="/activites">
-            <v-img :src="require('@/assets/photos/activites/jaja.jpg')"
-                 class="image"
-                 alt="lorem"
-                 width="100%"
-                 height="100%"
-            >
+            <v-img
+              :src="require('@/assets/photos/activites/jaja.jpg')"
+              :lazy-src="require('@/assets/photos/placeholder.png')"
+              class="image"
+              alt="lorem"
+              width="100%"
+              height="100%"
+             >
               <div class="overlay">
                 <div class="text uppercase">{{$t('nav.activities')}}</div>
               </div>
@@ -133,24 +147,35 @@ export default {
     model: 0,
     viewWidth: window.innerWidth,
     carouselItems: [
-      { // eslint-disable-next-line global-require
-        src: require('@/assets/photos/maison/terasse.jpg'),
+      {
+        // eslint-disable-next-line global-require
+        text: 'slider.heading1',
+        // eslint-disable-next-line global-require
+        src: require('@/assets/photos/maison/pool.jpg'),
       },
       {
         // eslint-disable-next-line global-require
-        src: require('@/assets/photos/maison/jardin.jpg'),
+        text: 'slider.heading2',
+        // eslint-disable-next-line global-require
+        src: require('@/assets/photos/maison/9.jpg'),
       },
-      { // eslint-disable-next-line global-require
-        src: require('@/assets/photos/maison/pool.jpg'),
-      },
-      { // eslint-disable-next-line global-require
+      {
+        // eslint-disable-next-line global-require
+        text: 'slider.heading3',
+        // eslint-disable-next-line global-require
         src: require('@/assets/photos/paysages/tautavel.jpg'),
       },
-      { // eslint-disable-next-line global-require
+      {
+        // eslint-disable-next-line global-require
+        text: 'slider.heading4',
+        // eslint-disable-next-line global-require
         src: require('@/assets/photos/paysages/gorge.jpg'),
       },
-      { // eslint-disable-next-line global-require
-        src: require('@/assets/photos/paysages/tour.jpg'),
+      {
+        // eslint-disable-next-line global-require
+        text: 'slider.heading5',
+        // eslint-disable-next-line global-require
+        src: require('@/assets/photos/maison/pinard.png'),
       },
     ],
   }),
@@ -248,5 +273,16 @@ export default {
 }
 .nmargin{
   margin-top: -48px;
+}
+.carousel-overlay{
+  height: 100%;
+  width: 100%;
+  background-color: #00000038;
+}
+.w80{
+  width: 80%;
+}
+.w80 h1{
+  font-weight: 300;
 }
 </style>
