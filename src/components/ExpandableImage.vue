@@ -80,9 +80,9 @@ export default {
           this.cloned.querySelector('.v-image').style.height = 'unset';
           this.closeButtonRef = this.cloned.querySelector('.close-button');
           this.closeButtonRef.addEventListener('click', this.closeImage);
-          document.body.appendChild(this.cloned);
-          document.body.style.overflow = 'hidden';
           this.cloned.addEventListener('touchmove', this.freezeVp, false);
+          document.querySelector('#app').appendChild(this.cloned);
+          document.querySelector('#app').style.overflow = 'hidden';
           if (this.closeOnBackgroundClick) {
             this.cloned.addEventListener('click', this.onExpandedImageClick);
           }
@@ -115,7 +115,7 @@ export default {
   transition: 0.25s opacity;
   cursor: zoom-in;
 }
-body > .expandable-image.expanded {
+.expandable-image.expanded {
   position: fixed;
   z-index: 999999;
   top: 0;
@@ -129,14 +129,14 @@ body > .expandable-image.expanded {
   padding-bottom: 0 !important;
   cursor: default;
 }
-body > .expandable-image.expanded > img {
+.expandable-image.expanded > img {
   width: 100%;
   max-width: 1200px;
   max-height: 100%;
   object-fit: contain;
   margin: 0 auto;
 }
-body > .expandable-image.expanded > .close-button {
+.expandable-image.expanded > .close-button {
   display: block;
 }
 .close-button {

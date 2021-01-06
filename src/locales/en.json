@@ -22,21 +22,35 @@
     "heading5":"Enjoy the authenticity of Catalan local products"
   },
   "homedesc":{
-    "title": "Welcome to La Maison à Gégé",
-    "a":"Built on one level on a spacious terrain, the Maison à Gégé is a beautiful and charming house in Cathar country located on the heights of Tautavel. Nestled comfortably in the middle of vineyards, it has a large garden with terrace and a swimming pool.",
-    "b":"It has three bedrooms, a living room, a bathroom, a shower room and a fully equipped kitchen. You will also benefit from a private parking space on site and a free Wi-Fi connection.",
-    "c":"The setting is ideal for hikers and cyclists as well as for enthusiasts of prehistory and lovers of fine wines."
+    "title": "Welcome to the Casa Assolellada",
+    "a":"Built on one level on a living area of 200 m², the Casa Assolellada is a beautiful and charming house in Cathar country located on the heights of Tautavel, 30 minutes from Perpignan and its great Mediterranean beaches.",
+    "b":"Nestled comfortably in the middle of vineyards, it has a large garden with terrace and a swimming pool.",
+    "c":"It has three bedrooms, an air-conditioned living room, a bathroom, a shower room and a fully equipped kitchen. You will also benefit from a private parking space on site and a free Wi-Fi connection.",
+    "d":"The setting is ideal for hikers and cyclists as well as for enthusiasts of prehistory and lovers of fine wines."
   },
   "activities":{
     "header1": "Le Château de Jau",
     "subheader1": "Local products",
     "header2": "Gouleyrous Gorges",
     "subheader2": "Natural site",
-    "header3": "Cathar Lands",
-    "subheader3": "Historical sites",
+    "header3": "Hikess in Cathar lands",
+    "subheader3": "Castles, Abbeys, Medieval cities",
     "header4": "Tautavel museum of Prehistory",
     "subheader4": "Cultural site",
     "header5": "Languedoc-Roussillon",
-    "subheader5": "Other activities"
+    "subheader5": "Other activities",
+    "header6": "Wines of Tautavel",
+    "subheader6": "Degustations",
+    "header7": "Mediterranean sea",
+    "subheader7": "Beaches",
+    "header8": "Kite surf",
+    "subheader8": "Nautical sport",
+    "header9": "Perpignan",
+    "header10": "Carcassonne",
+    "header11": "Narbonne",
+    "header12": "Collioure",
+    "subheader9": "City to discover",
+    "header13": "Pyrénnées-Orientales",
+    "subheader10": "Hiking"
   }
 }

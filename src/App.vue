@@ -74,7 +74,6 @@
         dense
       >
         <v-list-item-group
-          v-model="group"
           active-class="deep-purple--text text--accent-4"
         >
           <LocalizedLink to="/">
@@ -218,6 +217,20 @@ export default {
       // console.log(locale)
       this.$router.push({ lang: locale });
       // this.hideDropdown();
+    },
+  },
+  watch: {
+    // eslint-disable-next-line no-unused-vars
+    $route(to, from) {
+      // eslint-disable-next-line no-console
+      console.log(document.querySelector('#app'));
+      if (document.querySelector('#app .expandable-image')) {
+        // eslint-disable-next-line no-console
+        console.log('passed');
+        setTimeout(() => {
+          document.querySelector('#app .expandable-image.expanded').remove();
+        }, 100);
+      }
     },
   },
 };

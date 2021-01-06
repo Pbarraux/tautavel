@@ -9,7 +9,6 @@ import i18n from '../i18n';
 
 Vue.use(VueRouter);
 
-
 const routes = [
   {
     path: '/',
@@ -103,7 +102,6 @@ const scrollBehavior = (to, from, savedPosition) => {
     });
   });
 };
-
 
 const router = new VueRouter({
   mode: 'history',

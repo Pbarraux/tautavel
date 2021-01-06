@@ -22,21 +22,35 @@
     "heading5":"Savourez l’authenticité des produits du terroir Catalan"
   },
   "homedesc":{
-    "title": "Bienvenue à la Maison à Gégé",
-    "a":"Construite de plein pied sur un terrain spacieux, la Maison à Gégé est une belle demeure de charme en pays cathares située sur les hauteurs de Tautavel. Nichée confortablement au milieu des vignes, elle dispose d'un grand jardin avec terrasse et d'une piscine.",
-    "b":"Elle comporte trois chambres, un salon salle à manger, une salle de bain, une salle de douche et une cuisine équipée. Vous profiterez également d’un espace de stationnement privé sur place et d’une connexion Wi-Fi gratuite",
-    "c":"Le cadre est idéal pour les promeneurs et les cyclistes ainsi que pour les enthousiastes de préhistoire et pour les amateurs de bons vins. "
+    "title": "Bienvenue à la Casa Assolellada",
+    "a":"Construite de plein pied sur une surface habitable de 200 m², la Casa Assolellada est une belle demeure de charme en pays cathares située sur les hauteurs de Tautavel, a 30 minutes de Perpignan et de ses grandes plages méditerranéennes.",
+    "b":"Nichée confortablement au milieu des vignes, elle dispose d'un grand jardin avec terrasse et d'une piscine.",
+    "c":"Elle comporte trois chambres, un salon salle à manger climatisé, une salle de bain, une salle de douche et une cuisine équipée. Vous profiterez également d’un espace de stationnement privé sur place et d’une connexion Wi-Fi gratuite",
+    "d":"Le cadre est idéal pour les promeneurs et les cyclistes ainsi que pour les enthousiastes de préhistoire et pour les amateurs de bons vins. "
   },
   "activities":{
     "header1": "Le Château de Jau",
     "subheader1": "Terroir",
     "header2": "Les Gorges de Gouleyrous",
     "subheader2": "Site naturel",
-    "header3": "Pays Cathares",
-    "subheader3": "Sites historiques",
+    "header3": "Balades en pays Cathare",
+    "subheader3": "Chateaux, Abbayes, cités Médiévales",
     "header4": "Musée de préhistoire de Tautavel",
     "subheader4": "Site culturel",
     "header5": "Le Languedoc-Roussillon",
-    "subheader5": "Autres activités"
+    "subheader5": "Autres activités",
+    "header6": "Vins de tautavel",
+    "subheader6": "Dégustations",
+    "header7": "Méditerranée",
+    "subheader7": "Plages",
+    "header8": "Kite surf",
+    "subheader8": "Sport nautique",
+    "header9": "Perpignan",
+    "header10": "Carcassonne",
+    "header11": "Narbonne",
+    "header12": "Collioure",
+    "subheader9": "Ville à découvrir",
+    "header13": "Pyrénnées-Orientales",
+    "subheader10": "Randonées"
   }
 }

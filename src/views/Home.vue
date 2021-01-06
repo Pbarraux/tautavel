@@ -48,19 +48,13 @@
         </v-col>
       </v-row>
       <v-row class="d-flex flex-row" align="baseline" justify="center">
-        <v-col justify-center cols=12 md=4>
-         <div class="pa-2 text-h6 text-sm-h6 text-center">
-             <v-icon class="pin mb-2" color="black">mdi-calendar</v-icon>
-             {{$t('linkwords.from')}} 01/09/2020 {{$t('linkwords.to')}} 31/12/2020
-          </div>
-        </v-col>
-        <v-col justify-center cols=12 md=4>
+        <v-col justify-center cols=12 md=6>
          <div class="pa-2 text-h6 text-sm-h6 text-center">
              <v-icon class="pin mb-2" color="black">mdi-phone</v-icon>
              +49 152 277 63 780
           </div>
         </v-col>
-        <v-col justify-center cols=12 md=4>
+        <v-col justify-center cols=12 md=6>
          <div class="pa-2 text-h6 text-sm-h6 text-center">
              <v-icon class="pin mb-2" color="black">mdi-email</v-icon>
              philippedemazieres@gmail.com
@@ -121,14 +115,14 @@
         <v-col d-flex justify-center xs-12>
          <div class="text-h5 text-sm-h4 text-center mt-8">
            <v-icon class="pin2 mb-2" color="black">mdi-map-marker</v-icon>
-           <p>Avenue Philippe Poumies, 66720 Tautavel, France</p>
+           <p>Tautavel, France</p>
           </div>
         </v-col>
       </v-row>
     </v-container>
     <v-container class="mb-8">
       <iframe width="100%" height="450" frameborder="0" style="border:0"
-      src="https://www.google.com/maps/embed/v1/search?q=Avenue+philippe+poumies,+66720+Tautavel&key=AIzaSyD9EyxV9D5YctrE36Jn-6q5ZGVmV9PUNWw" allowfullscreen></iframe>
+      src="https://www.google.com/maps/embed/v1/search?q=Tautavel&key=AIzaSyD9EyxV9D5YctrE36Jn-6q5ZGVmV9PUNWw" allowfullscreen></iframe>
     </v-container>
   </v-container>
 </template>

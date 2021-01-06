@@ -13,6 +13,9 @@
     <p>
       {{$t('homedesc.c')}}
     </p>
+    <p>
+      {{$t('homedesc.d')}}
+    </p>
     <Gallery :photos=photos></Gallery>
   </v-container>
 </template>
@@ -47,6 +50,14 @@ export default {
       { title: 'Salle de bain', alt: 'salle de bain', src: require('@/assets/photos/maison/22.jpg') },
       // eslint-disable-next-line global-require
       { title: 'Cuisine', alt: 'cuisine', src: require('@/assets/photos/maison/23.jpg') },
+      // eslint-disable-next-line global-require
+      { title: 'Jardin', alt: 'jardin', src: require('@/assets/photos/maison/24.jpg') },
+      // eslint-disable-next-line global-require
+      { title: 'Vignes', alt: 'vignes', src: require('@/assets/photos/maison/25.jpg') },
+      // eslint-disable-next-line global-require
+      { title: 'Table', alt: 'table', src: require('@/assets/photos/maison/26.jpg') },
+      // eslint-disable-next-line global-require
+      { title: 'Paysage', alt: 'paysage', src: require('@/assets/photos/maison/27.jpg') },
     ],
   }),
 };
