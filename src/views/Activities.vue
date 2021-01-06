@@ -51,7 +51,7 @@ export default {
         src: require('@/assets/photos/activites/jaja.jpg'),
         header: 'activities.header1',
         subheader: 'activities.subheader1',
-        href: 'http://www.chateaudejau.com/grill/',
+        href: 'https://www.chateaudejau.com/',
       },
       {
         title: 'Degustation de Vin de la region de Tautavel',
