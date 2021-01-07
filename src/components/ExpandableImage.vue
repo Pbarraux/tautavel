@@ -122,6 +122,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
   background: black;
   display: flex;
   align-items: center;
@@ -131,7 +132,7 @@ export default {
 }
 .expandable-image.expanded > img {
   width: 100%;
-  max-width: 1200px;
+  max-width: 800px;
   max-height: 100%;
   object-fit: contain;
   margin: 0 auto;

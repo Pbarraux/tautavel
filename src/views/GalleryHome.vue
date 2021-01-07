@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 <template>
-  <v-container class="gallery-container text-h6">
+  <v-container class="gallery-container pt-8 pb-8 text-h6">
     <h2 class="text-h4 mb-10 mt-8">
       {{$t('homedesc.title')}}
     </h2>
@@ -30,6 +30,8 @@ export default {
   },
   data: () => ({
     photos: [
+      // eslint-disable-next-line global-require
+      { title: 'Piscine', alt: 'piscine', src: require('@/assets/photos/maison/pool_2.jpg') },
       // eslint-disable-next-line global-require
       { title: 'Piscine', alt: 'piscine', src: require('@/assets/photos/maison/pool.jpg') },
       // eslint-disable-next-line global-require

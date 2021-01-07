@@ -227,7 +227,7 @@ export default {
 #section05 a span {
   position: absolute;
   bottom: 40px;
-  left: 50%;
+  left: calc(50% - 12px);
   width: 48px;
   height: 48px;
   margin-left: -12px;
