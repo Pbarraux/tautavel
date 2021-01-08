@@ -271,7 +271,7 @@ export default {
 .carousel-overlay{
   height: 100%;
   width: 100%;
-  background-color: #1d1d1d38;
+  background-color: #13131338;
 }
 .w80{
   width: 80%;
